@@ -37,28 +37,63 @@ The following layout is recommended. Filenames and paths should match the files 
 ```text
 HeartDict/
 ├── README.md
-├── .gitignore
-├── python/
-│   ├── requirements.txt
-│   ├── convert_to_onnx.py
-│   └── models/
-│       ├── heart_model.sav
-│       └── heart_model.onnx
-├── android/
+├── .gitattributes
+│
+├── android/                         # Android Studio project
+│   ├── .gitignore
+│   ├── .idea/                       # IDE settings currently tracked
 │   ├── app/
-│   │   └── src/main/
-│   │       ├── AndroidManifest.xml
-│   │       ├── java/
-│   │       ├── res/
-│   │       └── assets/
-│   │           └── heart_model.onnx
-│   ├── gradle/wrapper/
+│   │   ├── .gitignore
+│   │   ├── build.gradle.kts
+│   │   ├── proguard-rules.pro
+│   │   └── src/
+│   │       ├── androidTest/         # Instrumented tests
+│   │       ├── test/                # Unit tests
+│   │       └── main/
+│   │           ├── AndroidManifest.xml
+│   │           ├── ic_launcher-playstore.png
+│   │           ├── assets/
+│   │           │   └── heart_disease_model.onnx
+│   │           ├── java/com/firstapp/diseasepredictor/
+│   │           │   ├── MainActivity.kt
+│   │           │   └── HeartDiseasePredictor.kt
+│   │           └── res/
+│   │               ├── drawable/
+│   │               ├── layout/
+│   │               │   └── activity_main.xml
+│   │               ├── mipmap-*/    # Launcher icons
+│   │               ├── values/
+│   │               ├── values-night/
+│   │               └── xml/
 │   ├── build.gradle.kts
 │   ├── settings.gradle.kts
+│   ├── gradle.properties
+│   ├── gradle/
+│   │   ├── libs.versions.toml
+│   │   └── wrapper/
+│   │       ├── gradle-wrapper.jar
+│   │       └── gradle-wrapper.properties
 │   ├── gradlew
 │   └── gradlew.bat
-└── screenshots/
+│
+├── app/                             # Installable Android app
+│   └── HeartDict.apk
+│
+└── python/                          # Python scripts and model files
+    ├── app.py
+    ├── check_model.py
+    ├── covert_model.py
+    ├── test.py
+    ├── heart_disease_model.sav
+    ├── heart_disease_model.onnx
+    └── requirements.txt.txt
 ```
+
+- **android/** contains the Android application source, resources,
+  ONNX model, tests, and Gradle configuration.
+- **app/** contains the downloadable `HeartDict.apk`.
+- **python/** contains the Python scripts and the original and
+  converted model files.
 
 Android projects may use `.gradle` files instead of `.gradle.kts`. Keep the build files generated for your existing project.
 
