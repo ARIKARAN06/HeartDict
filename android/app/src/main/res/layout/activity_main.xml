@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    a
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="ARIKARAN A -B.Sc-CS-A"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="227171009"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="Heart Disease Predictor"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ageInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/sexInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sex (0 or 1)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/cpInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Chest Pain (cp)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/trestbpsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Resting Blood Pressure"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/cholInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cholesterol"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/fbsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fasting Blood Sugar (0 or 1)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/restecgInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rest ECG"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/thalachInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Maximum Heart Rate"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/exangInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Exercise Angina (0 or 1)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/oldpeakInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Oldpeak"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/slopeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Slope"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/caInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CA"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/thalInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Thal"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/predictButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PREDICT"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>
